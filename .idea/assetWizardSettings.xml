@@ -51,7 +51,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="47" />
+                                                <entry key="scalingPercent" value="43" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -63,7 +63,7 @@
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="b9dc2a" />
-                                      <entry key="foregroundImage" value="C:\Users\Harin\Downloads\family-tree.png" />
+                                      <entry key="foregroundImage" value="C:\Users\Harin\OneDrive\Pictures\Saved Pictures\App Icons\family-tree.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
