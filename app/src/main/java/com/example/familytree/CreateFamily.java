@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class CreateFamily extends AppCompatActivity {
-
     EditText familyName;
     Spinner cloudStorage;
 
@@ -19,6 +18,5 @@ public class CreateFamily extends AppCompatActivity {
         familyName = (EditText) findViewById(R.id.familyName);
         cloudStorage = (Spinner) findViewById(R.id.cloudStorage);
 
-        Intent intent = new Intent(getIntent());
     }
 }
