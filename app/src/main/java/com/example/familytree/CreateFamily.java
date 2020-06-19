@@ -15,4 +15,3 @@ public class CreateFamily extends AppCompatActivity {
         setContentView(R.layout.create_screen);
     }
 }
- 
