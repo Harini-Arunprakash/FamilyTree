@@ -13,19 +13,6 @@ public class MainActivity extends AppCompatActivity {
     ImageButton update_button;
     ImageButton load_button;
 
-    public void createButtonClicked(View v) {
-        Intent createClicked = new Intent(MainActivity.this, CreateFamily.class);
-        startActivity(createClicked);
-    }
-
-    public void updateButtonClicked(View v) {
-
-    }
-
-    public void loadButtonClicked(View v) {
-
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,5 +21,19 @@ public class MainActivity extends AppCompatActivity {
         create_button = (ImageButton) findViewById(R.id.create_button);
         update_button = (ImageButton) findViewById(R.id.update_button);
         load_button = (ImageButton) findViewById(R.id.load_button);
+
     }
+
+    public void createButtonClicked(View v) {
+        Intent createClicked = new Intent(MainActivity.this, CreateFamily.class);
+        startActivity(createClicked);
+    }
+
+//    public void updateButtonClicked(View v) {
+//
+//    }
+//
+//    public void loadButtonClicked(View v) {
+//
+//    }
 }
