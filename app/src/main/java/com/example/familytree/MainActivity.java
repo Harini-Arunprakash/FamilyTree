@@ -9,9 +9,9 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton create_button = (ImageButton) findViewById(R.id.create_button);
-    ImageButton update_button = (ImageButton) findViewById(R.id.update_button);
-    ImageButton load_button = (ImageButton) findViewById(R.id.load_button);
+    ImageButton create_button;
+    ImageButton update_button;
+    ImageButton load_button;
 
     public void createButtonClicked(View v) {
         Intent createClicked = new Intent(MainActivity.this, CreateFamily.class);
@@ -30,5 +30,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        create_button = (ImageButton) findViewById(R.id.create_button);
+        update_button = (ImageButton) findViewById(R.id.update_button);
+        load_button = (ImageButton) findViewById(R.id.load_button);
     }
 }
