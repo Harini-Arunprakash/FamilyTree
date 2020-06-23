@@ -29,11 +29,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(createClicked);
     }
 
-//    public void updateButtonClicked(View v) {
-//
-//    }
-//
-//    public void loadButtonClicked(View v) {
-//
-//    }
+    public void updateButtonClicked(View v) {
+        Intent updateClicked = new Intent(MainActivity.this, UpdateFamily.class);
+        startActivity(updateClicked);
+    }
+
+    public void loadButtonClicked(View v) {
+        Intent loadClicked = new Intent(MainActivity.this, LoadFamily.class);
+        startActivity(loadClicked);
+    }
 }
