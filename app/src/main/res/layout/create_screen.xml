@@ -7,7 +7,7 @@
     android:background="@android:color/background_light">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/familyNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.082" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/cloudText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
@@ -65,7 +65,7 @@
         app:layout_constraintVertical_bias="0.167" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/homeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/background_light"
@@ -79,7 +79,7 @@
         app:srcCompat="@drawable/home" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/nextButton"
         android:layout_width="46dp"
         android:layout_height="47dp"
         android:layout_marginTop="49dp"
@@ -87,14 +87,14 @@
         android:layout_marginRight="162dp"
         android:layout_marginBottom="406dp"
         android:background="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/homeButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/nextText"
         app:layout_constraintTop_toBottomOf="@+id/cloudStorage"
         app:srcCompat="@drawable/rightarrow" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/nextText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
@@ -105,9 +105,9 @@
         android:text="Next"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintBottom_toTopOf="@+id/homeButton"
+        app:layout_constraintEnd_toStartOf="@+id/nextButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/cloudText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

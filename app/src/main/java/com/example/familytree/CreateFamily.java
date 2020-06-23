@@ -27,8 +27,8 @@ public class CreateFamily extends AppCompatActivity {
         startActivity(homeClicked);
     }
 
-    public void backButtonClicked(View v) {
-        Intent backClicked = new Intent(CreateFamily.this, MainActivity.class);
-        startActivity(backClicked);
+    public void nextButtonClicked(View v) {
+        Intent nextClicked = new Intent(CreateFamily.this, ConfigureActivity.class);
+        startActivity(nextClicked);
     }
 }
