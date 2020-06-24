@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/enterPrompt"
         android:layout_width="251dp"
         android:layout_height="30dp"
         android:fontFamily="serif"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.313" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/enterCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="98dp"
@@ -36,7 +36,7 @@
         app:layout_constraintBottom_toTopOf="@+id/enterButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/enterPrompt" />
 
     <Button
         android:id="@+id/enterButton"
@@ -55,5 +55,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/enterCode" />
 </androidx.constraintlayout.widget.ConstraintLayout>
