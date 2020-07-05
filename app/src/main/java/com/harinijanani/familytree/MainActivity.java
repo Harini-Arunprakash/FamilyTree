@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.harinijanani.familytree.storage.FirebaseDB;
+
 
 public class MainActivity extends AppCompatActivity {
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     ImageButton create_button;
     ImageButton update_button;
@@ -18,11 +22,14 @@ public class MainActivity extends AppCompatActivity {
      protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         create_button = (ImageButton) findViewById(R.id.create_button);
         update_button = (ImageButton) findViewById(R.id.update_button);
         load_button = (ImageButton) findViewById(R.id.load_button);
 
+        FirebaseDB db = new FirebaseDB();
+        db.testSave();
     }
 
     public void createButtonClicked(View v) {
