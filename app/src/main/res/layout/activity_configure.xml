@@ -6,40 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".ConfigureActivity">
 
-    <EditText
-        android:id="@+id/editText5"
+    <CheckBox
+        android:id="@+id/contactCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:fontFamily="serif"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
+        android:text="Contact"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.693"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.645" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="serif"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.693"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.215" />
+        app:layout_constraintVertical_bias="0.539" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/nameCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
@@ -52,7 +33,7 @@
         app:layout_constraintVertical_bias="0.223" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/bioCheckBox"
         android:layout_width="106dp"
         android:layout_height="33dp"
         android:fontFamily="serif"
@@ -65,7 +46,7 @@
         app:layout_constraintVertical_bias="0.326" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/picCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
@@ -78,17 +59,17 @@
         app:layout_constraintVertical_bias="0.429" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/birthdayCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Contact"
+        android:text="Birthday"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.649" />
+        app:layout_constraintVertical_bias="0.643" />
 
     <TextView
         android:id="@+id/textView4"
@@ -104,36 +85,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.067" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="serif"
-        android:hint="ex: age, hobbies, etc."
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.693"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="130dp"
-        android:layout_height="126dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.627"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483"
-        app:srcCompat="@drawable/emptypic" />
-
     <Button
-        android:id="@+id/button"
+        android:id="@+id/saveButton"
         android:layout_width="146dp"
         android:layout_height="82dp"
         android:text="SAVE"
