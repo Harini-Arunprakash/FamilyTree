@@ -11,8 +11,6 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.widget.ImageView;
 
-import com.example.familytree.R;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;

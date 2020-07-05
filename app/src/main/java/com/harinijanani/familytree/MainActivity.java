@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.familytree.R;
 
 public class MainActivity extends AppCompatActivity {
 

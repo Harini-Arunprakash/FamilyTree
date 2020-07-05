@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.example.familytree.R;
 
 
 public class CreateFamily extends AppCompatActivity {
