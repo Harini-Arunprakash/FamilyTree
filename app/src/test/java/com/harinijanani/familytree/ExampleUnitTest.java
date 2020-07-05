@@ -1,4 +1,4 @@
-package com.example.familytree;
+package com.harinijanani.familytree;
 
 import org.junit.Test;
 

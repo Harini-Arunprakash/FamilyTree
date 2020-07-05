@@ -15,8 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddPerson"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.harinijanani.familytree.AddPerson"></activity>
+        <activity android:name="com.harinijanani.familytree.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,11 +24,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreateFamily"
+            android:name="com.harinijanani.familytree.CreateFamily"
             android:label="@string/app_name" />
-        <activity android:name=".LoadFamily" />
-        <activity android:name=".UpdateFamily" />
-        <activity android:name=".ConfigureActivity" />
+        <activity android:name="com.harinijanani.familytree.LoadFamily" />
+        <activity android:name="com.harinijanani.familytree.UpdateFamily" />
+        <activity android:name="com.harinijanani.familytree.ConfigureActivity" />
 
 
     </application>

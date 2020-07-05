@@ -1,4 +1,4 @@
-package com.example.familytree;
+package com.harinijanani.familytree;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,17 +8,18 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.example.familytree.R;
+
 import java.time.chrono.MinguoChronology;
 
-public class UpdateFamily extends AppCompatActivity {
+public class LoadFamily extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.update_screen);
+        setContentView(R.layout.load_screen);
 
 
     }
-
 
 }

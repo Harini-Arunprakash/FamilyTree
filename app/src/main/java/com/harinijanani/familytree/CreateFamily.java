@@ -1,4 +1,4 @@
-package com.example.familytree;
+package com.harinijanani.familytree;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.example.familytree.R;
 
 
 public class CreateFamily extends AppCompatActivity {

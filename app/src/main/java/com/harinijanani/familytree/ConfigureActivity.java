@@ -1,9 +1,11 @@
-package com.example.familytree;
+package com.harinijanani.familytree;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.CheckBox;
+
+import com.example.familytree.R;
 
 public class ConfigureActivity extends AppCompatActivity {
 
