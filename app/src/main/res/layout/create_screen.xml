@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Family Name:"
+        android:text="@string/family_name"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,7 +27,7 @@
         android:layout_height="40dp"
         android:ems="10"
         android:fontFamily="serif"
-        android:hint="ex: the Smith Family"
+        android:hint="@string/ex_the_smith_family"
         android:inputType="textPersonName"
         android:textColor="@android:color/black"
         android:textSize="18sp"
@@ -36,14 +36,15 @@
         app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintVertical_bias="0.082"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/cloudText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Cloud Strorage:"
+        android:text="@string/cloud_storage"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,7 +77,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/home"
+        android:contentDescription="TODO" />
 
     <ImageButton
         android:id="@+id/nextButton"
@@ -90,6 +92,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cloudStorage"
         app:layout_constraintVertical_bias="0.159"
-        app:srcCompat="@drawable/right" />
+        app:srcCompat="@drawable/right"
+        android:contentDescription="TODO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
