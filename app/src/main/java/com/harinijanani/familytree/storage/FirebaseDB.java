@@ -12,6 +12,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.harinijanani.familytree.MainActivity;
+import com.harinijanani.familytree.domain.FamilyTree;
 
 import java.util.Random;
 
@@ -47,6 +48,26 @@ public class FirebaseDB {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Log.i("ERROR", "Error fetching data");
+            }
+        });
+    }
+
+    public void testSaveObj() {
+        // Database reference pointing to root of database
+        rootRef = FirebaseDatabase.getInstance().getReference();
+
+        FamilyTree fam = new FamilyTree("Harini", "Arunprakash", rootRef.push().getKey(), "blah@blah.com");
+        // Database reference pointing to demo node
+
+        demoRef = rootRef.child(fam.getId());
+
+        String value = "HelloTestSaveObject";
+
+        // Push creates a unique id in database
+        demoRef.setValue(fam, new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(DatabaseError firebaseError, DatabaseReference firebase) {
+                Log.i("INFO", "SaveObject");
             }
         });
     }

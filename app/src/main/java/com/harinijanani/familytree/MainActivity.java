@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         load_button = (ImageButton) findViewById(R.id.load_button);
 
         FirebaseDB db = new FirebaseDB();
-        db.testSave();
+        db.testSaveObj();
     }
 
     public void createButtonClicked(View v) {
