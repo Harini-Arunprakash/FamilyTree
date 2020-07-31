@@ -14,16 +14,29 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Checkable;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.harinijanani.familytree.storage.FirebaseDB;
+
 public class AddPerson extends AppCompatActivity {
-//////////////////////////////////////////////////////////////////
+
     private static final int PERMISSION_CODE = 1000;
     private static final int IMAGE_CAPTURE_CODE = 1001;
 
     Button mCaptureBtn;
     ImageView mImageView;
+    CheckBox female;
+    CheckBox male;
+    EditText firstName;
+    EditText lastName;
+    Button personSaveButton;
+    boolean isFemale = false;
+    boolean isMale = false;
+    boolean gender = true;
 
     Uri image_uri;
 
@@ -31,10 +44,27 @@ public class AddPerson extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_add_person);
 
         mCaptureBtn = findViewById(R.id.capture_image_btn);
         mImageView = findViewById(R.id.image_view);
+        female = findViewById(R.id.femaleCheckBox);
+        male = findViewById(R.id.maleCheckBox);
+        firstName = findViewById(R.id.firstName);
+        lastName = findViewById(R.id.lastName);
+        personSaveButton = findViewById(R.id.addPersonSaveButton);
+
+        if(female.isChecked()){
+            isFemale = true;
+        }
+        if(male.isChecked()){
+            isMale = true;
+        }
+
+        if(isFemale == true) {
+            gender = false;
+        }
+
 
         //button click
 
@@ -55,6 +85,22 @@ public class AddPerson extends AppCompatActivity {
                 }
             }
         });
+
+        personSaveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String first = firstName.getText().toString();
+                String last = lastName.getText().toString();
+                send(first, last, gender);
+
+            }
+        });
+
+}
+
+    public void send(String f, String l, boolean gender) {
+        FirebaseDB db = new FirebaseDB();
+        db.testSaveHumanObjJsonComplex(f, l,  gender);
     }
 
     private void openCamera() {
@@ -88,6 +134,5 @@ public class AddPerson extends AppCompatActivity {
             mImageView.setImageURI(image_uri);
         }
     }
-
-///////////////////////////////////////////////////////////////////////////////////
+    
 }
