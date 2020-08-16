@@ -17,7 +17,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Checkable;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.harinijanani.familytree.storage.FirebaseDB;
@@ -29,14 +31,13 @@ public class AddPerson extends AppCompatActivity {
 
     Button mCaptureBtn;
     ImageView mImageView;
-    CheckBox female;
-    CheckBox male;
-    EditText firstName;
-    EditText lastName;
+    RadioButton female;
+    RadioButton male;
+    public static EditText firstName;
+    public static EditText lastName;
     Button personSaveButton;
-    boolean isFemale = false;
-    boolean isMale = false;
-    boolean gender = true;
+    public static boolean gender = true;
+    public static String userGender;
 
     Uri image_uri;
 
@@ -48,22 +49,11 @@ public class AddPerson extends AppCompatActivity {
 
         mCaptureBtn = findViewById(R.id.capture_image_btn);
         mImageView = findViewById(R.id.image_view);
-        female = findViewById(R.id.femaleCheckBox);
-        male = findViewById(R.id.maleCheckBox);
+        female = findViewById(R.id.femaleButton);
+        male = findViewById(R.id.maleButton);
         firstName = findViewById(R.id.firstName);
         lastName = findViewById(R.id.lastName);
         personSaveButton = findViewById(R.id.addPersonSaveButton);
-
-        if(female.isChecked()){
-            isFemale = true;
-        }
-        if(male.isChecked()){
-            isMale = true;
-        }
-
-        if(isFemale == true) {
-            gender = false;
-        }
 
 
         //button click
@@ -92,7 +82,22 @@ public class AddPerson extends AppCompatActivity {
                 String first = firstName.getText().toString();
                 String last = lastName.getText().toString();
                 send(first, last, gender);
+                Intent personSaveButtonClicked = new Intent(AddPerson.this, FamilyListView.class);
+                startActivity(personSaveButtonClicked);
+            }
+        });
 
+        female.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onRadioButtonClicked(v);
+            }
+        });
+
+        male.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onRadioButtonClicked(v);
             }
         });
 
@@ -101,6 +106,23 @@ public class AddPerson extends AppCompatActivity {
     public void send(String f, String l, boolean gender) {
         FirebaseDB db = new FirebaseDB();
         db.testSaveHumanObjJsonComplex(f, l,  gender);
+    }
+
+    public void onRadioButtonClicked(View v) {
+        boolean checked = ((RadioButton) v).isChecked();
+
+        switch(v.getId()) {
+            case R.id.maleButton:
+                if (checked)
+                    userGender = "male";
+                    gender = true;
+                    break;
+            case R.id.femaleButton:
+                if (checked)
+                    userGender = "female";
+                    gender = false;
+                    break;
+        }
     }
 
     private void openCamera() {
@@ -117,7 +139,7 @@ public class AddPerson extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch(requestCode){
             case PERMISSION_CODE:{
-                if(grantResults.length > 0&& grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                     openCamera();
                 } else {
                     Toast.makeText(this, "Permission Denied...", Toast.LENGTH_SHORT).show();
@@ -134,5 +156,5 @@ public class AddPerson extends AppCompatActivity {
             mImageView.setImageURI(image_uri);
         }
     }
-    
+
 }

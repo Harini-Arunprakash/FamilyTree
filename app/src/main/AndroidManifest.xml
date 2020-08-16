@@ -14,6 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.harinijanani.familytree.AddPerson"></activity>
+        <activity android:name="com.harinijanani.familytree.FamilyListView"></activity>
+        <activity android:name="com.harinijanani.familytree.AddRelatives"></activity>
         <activity android:name="com.harinijanani.familytree.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
